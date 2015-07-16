@@ -1,0 +1,43 @@
+@import "font";
+@import "main";
+@import "foot";
+
+html, body {
+	height: 100%;
+	margin: 0px;
+	color: #3f3c3a;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-size: 35px;
+}
+
+#menu {
+	position: fixed;
+		top: 0px; right: 0px; bottom: 0px;
+	width: 25%;
+	background: #eb811a;
+	border-left: 2px solid #c76d16;
+	ul {
+		margin-top: 200px;
+		padding-left: 10px;
+	}
+	li {
+		margin-bottom: 15px;
+		list-style: none;
+		&::before {
+			content: "> ";
+		}
+	}
+	a {
+		color: #3f3c3a;
+		border-bottom: 1px solid #3f3c3a;
+	}
+}
+
+.orange {
+	color: #ef6b00;
+}
+
+a {
+	text-decoration: none;
+}

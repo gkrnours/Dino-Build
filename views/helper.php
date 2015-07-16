@@ -275,7 +275,3 @@
 
 
 <?php } ?>
-
-<div id="Bas">
-    <?php echo $footer ?>
-</div>

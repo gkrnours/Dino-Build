@@ -1,4 +1,0 @@
-<!-- PIED PAGE -->
-
-</body>
-</html>

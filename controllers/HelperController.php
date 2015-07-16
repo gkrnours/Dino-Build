@@ -1,5 +1,7 @@
 <?php
 class HelperController {
+    private $etape = 0;
+
     public function __construct() {
     }
     public function run() {
@@ -115,19 +117,23 @@ class HelperController {
             }
         }
 
-        $footer = "<img src=\"views/images/Etapes/etape";
         if (!empty($competencesdispo)){
-            $footer = $footer . "4.png\"";
+	    $this->etape = 4;
         } elseif (!empty($table)){
-            $footer = $footer . "3.png\"";
+	    $this->etape = 3;
         } elseif (!empty($race)) {
-            $footer = $footer . "2.png\"";
+	    $this->etape = 2;
         } else {
-            $footer = $footer . "1.png\"";
+	    $this->etape = 1;
         }
-        $footer = $footer . " alt=\"Etapes\" style=\"width:100%;height:100%;\"/>";
 
         require_once (CHEMIN_VUES . 'helper.php');
+    }
+
+    public function footer() {
+        $footer = "<img id=etape src=views/images/etapes/etape" . $this->etape;
+        $footer = $footer . ".png alt=Etapes/>";
+	echo $footer;
     }
 
     public function isValid($competences){

@@ -1,0 +1,51 @@
+main {
+	display: block;
+	position: relative;
+	min-height: 100%;
+	margin: 0px;
+	margin-right: 25%;
+	background-color: #f6bc47;
+	background-image: url('/views/images/background.jpg');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	h1 {
+		margin: auto;
+		padding-top: 50px;
+		width: 450px;
+		font-size: 72px;
+		font-weight: 300;
+		a {
+			color: #3f3c3a;
+			text-decoration: none;
+		}
+	}
+	h2 {
+		margin: auto;
+		width: 450px;
+		color: #3f3c3a;
+		font-weight: 200;
+		font-size: 27px;
+		text-transform: uppercase;
+		letter-spacing: 18;
+	}
+
+	form {
+		position: relative;
+	}
+	.pagedImages {
+		position: relative;
+			top: 0; right: 0;
+		margin: auto;
+		& > input:nth-of-type(1):checked ~ label {
+		}
+		label {
+			height: auto;
+			cursor: pointer;
+			&::before {
+				background: none !important;
+			}
+		}
+	}
+}
